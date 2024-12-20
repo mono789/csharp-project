@@ -1,0 +1,18 @@
+﻿@model PruebaTecnica2.Models.User
+
+<div class="container">
+    <h2>Información del Usuario</h2>
+    @if (Model != null)
+    {
+        <table class="table">
+            <tr><th>ID</th><td>@Model.id</td></tr>
+            <tr><th>Nombre</th><td>@Model.name</td></tr>
+            <tr><th>Correo Electrónico</th><td>@Model.email</td></tr>
+            <tr><th>Telefono</th><td>@Model.phone</td></tr>
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+</div>

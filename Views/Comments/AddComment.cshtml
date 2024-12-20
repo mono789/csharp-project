@@ -1,0 +1,40 @@
+﻿@model PruebaTecnica2.Models.Comment
+
+<form method="post" asp-action="AddComment">
+    <div class="form-group">
+        <label for="postId">Post ID:</label>
+        <input type="number" id="postId" name="PostId" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="userId">User ID:</label>
+        <input type="number" id="userId" name="UserId" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="body">Body:</label>
+        <textarea id="body" name="Body" class="form-control" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Crear Comentario</button>
+</form>
+
+@if (Model != null)
+{
+    <h3>Comentario Creado</h3>
+    <p><strong>Post ID:</strong> @Model.postId</p>
+    <p><strong>User ID:</strong> @Model.userId</p>
+    <p><strong>Name:</strong> @Model.name</p>
+    <p><strong>Email:</strong> @Model.email</p>
+    <p><strong>Body:</strong> @Model.body</p>
+}

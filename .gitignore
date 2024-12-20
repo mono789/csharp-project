@@ -1,0 +1,17 @@
+# Archivos de Visual Studio
+.vs/
+.vs/PruebaTecnica2/
+.vscode/
+bin/
+obj/
+
+# Archivos de configuración de usuario
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Archivos de compilación
+*.dll
+*.exe
+*.pdb
